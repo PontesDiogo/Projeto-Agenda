@@ -4,12 +4,13 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.trabalho.Agenda.DTOs.CompromissoResponse;
-import com.trabalho.Agenda.Entities.Compromisso;
 import com.trabalho.Agenda.Mappers.CompromissoMapper;
 import com.trabalho.Agenda.Reposiotry.CompromissoRepository;
 
+@Service
 public class CompromissoService {
     @Autowired
     private CompromissoRepository repository;
