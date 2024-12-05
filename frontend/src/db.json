@@ -1,0 +1,28 @@
+{
+    "Compromissos": [
+        {
+            "id": 1,
+            "nome": "Compromisso 1",
+            "descricao": "Descrição do Compromisso 1",
+            "dataInicio": "2024-12-06",
+            "dataFim": "2024-12-07",
+            "local": "Local do Compromisso 1"
+        },
+        {
+            "id": 2,
+            "nome": "Compromisso 2",
+            "descricao": "Descrição do Compromisso 2",
+            "dataInicio": "2024-12-06",
+            "dataFim": "2024-12-07",
+            "local": "Local do Compromisso 2"
+        },
+        {
+            "id": 3,
+            "nome": "Compromisso 3",
+            "descricao": "Descrição do Compromisso 3",
+            "dataInicio": "2024-12-06",
+            "dataFim": "2024-12-07",
+            "local": "Local do Compromisso 3"
+        }
+    ]
+}

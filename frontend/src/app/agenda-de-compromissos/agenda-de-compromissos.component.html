@@ -1,0 +1,23 @@
+<p>agenda-de-compromissos works!</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Nome do evento</th>
+            <th scope="col">Local</th>
+            <th scope="col">Data de Inicio</th>
+            <th scope="col">Data de Fim</th>
+            <th scope="col">Descrição</th>
+        </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let compromisso of compromissos">
+        <th scope="row">{{compromisso.id}}</th>
+        <td>{{compromisso.nome}}</td>
+        <td>{{compromisso.local}}</td>
+        <td>{{compromisso.dataInicio}}</td>
+        <td>{{compromisso.dataFim}}</td>
+        <td>{{compromisso.descricao}}</td>
+      </tr>
+    </tbody>
+ </table>
