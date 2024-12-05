@@ -21,4 +21,11 @@ public class CompromissoController {
     public ResponseEntity<List<CompromissoResponse>> getAllCompromisso() {
         return ResponseEntity.ok(service.getAllCompromisso()); 
     }
+
+
+    @GetMapping("{id}")
+    public ResponseEntity<CompromissoResponse> getCompromissoById(Long id) {
+        return ResponseEntity.ok(service.getCompromissoById(id)); 
+    }
+  
 }
