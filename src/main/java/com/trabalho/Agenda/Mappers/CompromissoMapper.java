@@ -6,11 +6,7 @@ import com.trabalho.Agenda.Entities.Compromisso;
 
 public class CompromissoMapper {
 
-    public static CompromissoResponse toDto(Compromisso compromisso) {
-        return new CompromissoResponse(compromisso.getId(), compromisso.getTitulo(), compromisso.getDescricao(),
-                compromisso.getDataInicio(), compromisso.getDataFim(), compromisso.getLocal());
-
-    }
+    
     public static Compromisso toEntity(CompromissoRequest compromissoRequest) {
         Compromisso compromisso = new Compromisso();
         compromisso.setDataInicio(compromissoRequest.dataInicio());
@@ -19,5 +15,10 @@ public class CompromissoMapper {
         compromisso.setTitulo(compromissoRequest.titulo());
         compromisso.setLocal(compromissoRequest.local());
         return compromisso;
+    }
+    public static CompromissoResponse toDto(Compromisso compromisso) {
+        return new CompromissoResponse(compromisso.getId(), compromisso.getTitulo(), compromisso.getDescricao(),
+                compromisso.getDataInicio(), compromisso.getDataFim(), compromisso.getLocal());
+
     }
 }

@@ -31,11 +31,11 @@ public class CompromissoController {
     }
 
     @GetMapping("{id}")
-    public ResponseEntity<CompromissoResponse> getCompromissoById(Long id) {
+    public ResponseEntity<CompromissoResponse> getCompromissoById(@PathVariable Long id) {
         return ResponseEntity.ok(service.getCompromissoById(id));
     }
 
-    @PostMapping("save")
+    @PostMapping()
     public ResponseEntity<CompromissoResponse> saveCompromisso(@Validated @RequestBody CompromissoRequest compromisso) {
         CompromissoResponse newCompromisso = service.save(compromisso);
         return ResponseEntity.created(null).body(newCompromisso);

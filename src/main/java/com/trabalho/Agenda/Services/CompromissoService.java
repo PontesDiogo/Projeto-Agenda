@@ -35,9 +35,8 @@ public class CompromissoService {
     // }
 
     public CompromissoResponse save(CompromissoRequest compromisso) {
-        Compromisso compromissoEntity = CompromissoMapper.toEntity(compromisso);
-        Compromisso compromissoSaved = repository.save(compromissoEntity);
-        return CompromissoMapper.toDto(compromissoSaved);
+        Compromisso newCompromisso = repository.save(CompromissoMapper.toEntity(compromisso))   ;
+        return CompromissoMapper.toDto(newCompromisso);
     }
 
     public void update(CompromissoRequest compromisso, Long id) {

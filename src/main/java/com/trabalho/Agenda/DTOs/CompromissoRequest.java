@@ -12,9 +12,9 @@ public record CompromissoRequest(
   
     String descricao,
 
-    @NotBlank(message = "A data de início é obrigatória")
+    
     LocalDateTime dataInicio,
-    @NotBlank(message = "A data final é obrigatória")
+   
     LocalDateTime dataFim,
    
     String local
