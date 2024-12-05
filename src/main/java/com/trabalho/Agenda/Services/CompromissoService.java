@@ -6,6 +6,7 @@ import java.util.stream.Collectors;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.trabalho.Agenda.DTOs.CompromissoRequest;
 import com.trabalho.Agenda.DTOs.CompromissoResponse;
 import com.trabalho.Agenda.Entities.Compromisso;
 import com.trabalho.Agenda.Mappers.CompromissoMapper;
@@ -32,4 +33,9 @@ public class CompromissoService {
         
     // }
     
+    public CompromissoResponse save(CompromissoRequest compromisso) {
+        Compromisso compromissoEntity = CompromissoMapper.toEntity(compromisso);
+        Compromisso compromissoSaved = repository.save(compromissoEntity);
+        return CompromissoMapper.toDto(compromissoSaved);
+    }
 }
