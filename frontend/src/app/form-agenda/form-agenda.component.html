@@ -1,42 +1,48 @@
 <div class="container">
-    <h1>Cadastro de Compromissos</h1>
-  
-    <form [formGroup] = "formGroupCompromissos">
-        <div class="mb-3">
-            <label for="titulo" class="form-label">Titulo</label>
-            <input formControlName="titulo" type="text" class="form-control" id="titulo" placeholder="Defina um titulo para o compromissso">
-        </div>
-        <div class="mb-3">
-          <label for="descricao" class="form-label">Descrição</label>
-          <input formControlName="descricao" type="text" class="form-control" id="descricao" placeholder="Defina uma Descrição para o compromissso">
-        </div>
-        <div class="mb-3">
-          <label for="dataInicio" class="form-label">Data de Inicio</label>
-          <input formControlName="dataInicio" type="date" class="form-control" id="dataInicio" placeholder="Defina o horario de inicio">
-        </div>
-        <div class="mb-3">
-          <label for="dataFim" class="form-label">Data de Fim</label>
-          <input formControlName="dataFim" type="date" class="form-control" id="dataFim" placeholder="Defina o horario previsto para o final">
-        </div>
-        <div class="mb-3">
-            <label for="horaInicio" class="form-label">Hora de Inicio</label>
-            <input  formControlName="horaInicio" type="time" class="form-control" id="horaInicio" placeholder="Defina o horario previsto para o final">
-        </div>
-        <div class="mb-3">
-            <label for="horaFim" class="form-label">Hora de Fim</label>
-            <input formControlName="horaFim" type="time" class="form-control" id="horaFim" placeholder="Defina o horario previsto para o final">
-        </div>
-        <div class="mb-3">
-          <label for="local" class="form-label">Local</label>
-          <input formControlName="local" type="text" class="form-control" id="local" placeholder="Onde vai ser?">
-        </div>
-        
+  <h1>Cadastro de Compromissos</h1>
 
-        <button class="Btn" (click)="update()" *ngIf="isEditing">Editar </button>
+  <form [formGroup]="formGroupCompromissos">
+    <div class="mb-3">
+      <label for="titulo" class="form-label">Titulo</label>
+      <input formControlName="titulo" type="text" class="form-control" id="titulo"
+        placeholder="Defina um titulo para o compromissso">
+    </div>
+    <div class="mb-3">
+      <label for="descricao" class="form-label">Descrição</label>
+      <input formControlName="descricao" type="text" class="form-control" id="descricao"
+        placeholder="Defina uma Descrição para o compromissso">
+    </div>
+    <div class="mb-3">
+      <label for="dataInicio" class="form-label">Data de Inicio</label>
+      <input formControlName="dataInicio" type="date" class="form-control" id="dataInicio"
+        placeholder="Defina o horario de inicio">
+    </div>
+    <div class="mb-3">
+      <label for="dataFim" class="form-label">Data de Fim</label>
+      <input formControlName="dataFim" type="date" class="form-control" id="dataFim"
+        placeholder="Defina o horario previsto para o final">
+    </div>
+    <div class="mb-3">
+      <label for="horaInicio" class="form-label">Hora de Inicio</label>
+      <input formControlName="horaInicio" type="time" class="form-control" id="horaInicio"
+        placeholder="Defina o horario previsto para o final">
+    </div>
+    <div class="mb-3">
+      <label for="horaFim" class="form-label">Hora de Fim</label>
+      <input formControlName="horaFim" type="time" class="form-control" id="horaFim"
+        placeholder="Defina o horario previsto para o final">
+    </div>
+    <div class="mb-3">
+      <label for="local" class="form-label">Local</label>
+      <input formControlName="local" type="text" class="form-control" id="local" placeholder="Onde vai ser?">
+    </div>
 
-        <button (click)="save()" *ngIf="!isEditing">
-  <span>Save</span>
-        </button>
 
-    </form>
-  </div>
+    
+    <button class="btn btn-primary" (click)="save()" *ngIf="!isEditing">
+      <span>Save</span>
+    </button>
+    <button class="btn btn-primary" (click)="update()" *ngIf="isEditing">  <span>Editar</span> </button>
+
+  </form>
+</div>
