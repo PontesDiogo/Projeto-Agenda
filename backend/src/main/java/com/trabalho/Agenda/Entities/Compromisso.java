@@ -1,7 +1,7 @@
 package com.trabalho.Agenda.Entities;
 
 import java.io.Serializable;
-import java.time.LocalDateTime;
+import java.sql.Date;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -15,8 +15,8 @@ public class Compromisso implements Serializable{
     private long id;
     private String titulo;
     private String descricao;
-    private LocalDateTime dataInicio;
-    private LocalDateTime dataFim;
+    private Date dataInicio;
+    private Date dataFim;
     private String horaInicio;
     private String horaFim;
     private String local;
@@ -38,16 +38,16 @@ public class Compromisso implements Serializable{
     public void setDescricao(String descricao) {
         this.descricao = descricao;
     }
-    public LocalDateTime getDataInicio() {
+    public Date getDataInicio() {
         return dataInicio;
     }
-    public void setDataInicio(LocalDateTime dataInicio) {
+    public void setDataInicio(Date dataInicio) {
         this.dataInicio = dataInicio;
     }
-    public LocalDateTime getDataFim() {
+    public Date getDataFim() {
         return dataFim;
     }
-    public void setDataFim(LocalDateTime dataFim) {
+    public void setDataFim(Date dataFim) {
         this.dataFim = dataFim;
     }
     public String getLocal() {

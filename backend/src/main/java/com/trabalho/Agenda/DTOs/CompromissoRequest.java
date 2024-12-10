@@ -1,6 +1,6 @@
 package com.trabalho.Agenda.DTOs;
 
-import java.time.LocalDateTime;
+import java.sql.Date;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
@@ -13,9 +13,9 @@ public record CompromissoRequest(
     String descricao,
 
     
-    LocalDateTime dataInicio,
+    Date dataInicio,
    
-    LocalDateTime dataFim,
+    Date dataFim,
    
     String local,
     String horaInicio,
