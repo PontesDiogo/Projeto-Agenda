@@ -1,0 +1,10 @@
+a:hover{
+    color: #50c4e7;
+    font-size: 120%;
+
+}
+a{
+    text-decoration: none;
+    color: black;
+    transition: font-size 0.2s ease-in-out;
+}

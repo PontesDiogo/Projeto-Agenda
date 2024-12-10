@@ -11,7 +11,7 @@ import { CompromissosService } from '../compromissos.service';
 })
 export class FormCompromissosComponent implements OnInit {
 
-  formGroupCompromissos: FormGroup;
+  formGroupCompromissos: FormGroup; 
   isEditing: boolean = false;
 
   constructor(private router: Router,

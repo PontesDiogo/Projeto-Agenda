@@ -6,6 +6,7 @@
       <label for="titulo" class="form-label">Titulo</label>
       <input formControlName="titulo" type="text" class="form-control" id="titulo"
         placeholder="Defina um titulo para o compromissso">
+        
     </div>
     <div class="mb-3">
       <label for="descricao" class="form-label">Descrição</label>
@@ -40,7 +41,7 @@
 
     
     <button class="btn btn-primary" (click)="save()" *ngIf="!isEditing">
-      <span>Save</span>
+      <span>Salvar Compromisso</span>
     </button>
     <button class="btn btn-primary" (click)="update()" *ngIf="isEditing">  <span>Editar</span> </button>
 
