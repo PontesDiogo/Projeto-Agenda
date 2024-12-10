@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Compromisso } from '../compromisso';
 import { FormGroup } from '@angular/forms';
+import { CompromissosService } from '../compromissos.service';
 
 @Component({
   selector: 'app-agenda-de-compromissos',
@@ -10,7 +11,14 @@ import { FormGroup } from '@angular/forms';
 
 
 
-export class AgendaDeCompromissosComponent {
+export class AgendaDeCompromissosComponent implements OnInit {
   compromissos: Compromisso[] = [  ]
-  
+  constructor (private compromissosService: CompromissosService){}
+
+  ngOnInit(): void {
+    this.compromissosService.getCompromissos().subscribe(((data: Compromisso[]) => this.compromissos = data));
+
+  }
+
+
 }

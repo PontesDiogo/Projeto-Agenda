@@ -14,11 +14,13 @@ public class CompromissoMapper {
         compromisso.setDescricao(compromissoRequest.descricao());
         compromisso.setTitulo(compromissoRequest.titulo());
         compromisso.setLocal(compromissoRequest.local());
+        compromisso.setHoraInicio(compromissoRequest.horaInicio());
+        compromisso.setHoraFim(compromissoRequest.horaFim());
         return compromisso;
     }
     public static CompromissoResponse toDto(Compromisso compromisso) {
         return new CompromissoResponse(compromisso.getId(), compromisso.getTitulo(), compromisso.getDescricao(),
-                compromisso.getDataInicio(), compromisso.getDataFim(), compromisso.getLocal());
+                compromisso.getDataInicio(), compromisso.getDataFim(), compromisso.getLocal(), compromisso.getHoraInicio(), compromisso.getHoraFim());
 
     }
 }

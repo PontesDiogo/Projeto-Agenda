@@ -17,6 +17,8 @@ public class Compromisso implements Serializable{
     private String descricao;
     private LocalDateTime dataInicio;
     private LocalDateTime dataFim;
+    private String horaInicio;
+    private String horaFim;
     private String local;
     public long getId() {
         return id;
@@ -53,6 +55,20 @@ public class Compromisso implements Serializable{
     }
     public void setLocal(String local) {
         this.local = local;
+    }
+
+    
+    public String getHoraInicio() {
+        return horaInicio;
+    }
+    public void setHoraInicio(String horaInicio) {
+        this.horaInicio = horaInicio;
+    }
+    public String getHoraFim() {
+        return horaFim;
+    }
+    public void setHoraFim(String horaFim) {
+        this.horaFim = horaFim;
     }
     @Override
     public int hashCode() {

@@ -8,7 +8,9 @@ public record CompromissoResponse(
     String descricao,
     LocalDateTime dataInicio,
     LocalDateTime dataFim,
-    String local
+    String local,
+    String horaInicio,
+    String horaFim
 ) {
     
 }

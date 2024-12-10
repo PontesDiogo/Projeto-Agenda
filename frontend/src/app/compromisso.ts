@@ -4,5 +4,7 @@ export interface Compromisso{
     descricao: string;
     dataInicio: Date;
     dataFim: Date;
+    horaInicio: string;
+    horaFim: string;
     local: string;
   }

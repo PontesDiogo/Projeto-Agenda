@@ -17,7 +17,9 @@ public record CompromissoRequest(
    
     LocalDateTime dataFim,
    
-    String local
+    String local,
+    String horaInicio,
+    String horaFim
 ) {
     
 }

@@ -7,8 +7,8 @@ import { Compromisso } from './compromisso';
 })
 export class CompromissosService {
 
-  private apiUrl = 'http://localhost:3000/compromissos';
-  constructor(private http: HttpClient) { }
+  private apiUrl = 'http://localhost:8080/compromissos';  
+  constructor(private http: HttpClient) { } 
 
   getCompromissos(): Observable<Compromisso[]> {
     return this.http.get<Compromisso[]>(this.apiUrl);
