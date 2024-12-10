@@ -1,6 +1,6 @@
 export interface Compromisso{
     id: number;
-    nome: string;
+    titulo: string;
     descricao: string;
     dataInicio: Date;
     dataFim: Date;

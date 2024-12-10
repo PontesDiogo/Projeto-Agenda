@@ -7,11 +7,18 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AgendaDeCompromissosComponent } from './agenda-de-compromissos/agenda-de-compromissos.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { FormCompromissosComponent } from './form-agenda/form-agenda.component';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AgendaDeCompromissosComponent,
+    FormCompromissosComponent,
+    NavBarComponent,
+    HomeComponent,
+
     
   ],
   imports: [

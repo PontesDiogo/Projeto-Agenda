@@ -1,5 +1,8 @@
-|
-<table class="table">
+<div class="container">
+  <button>
+    <a routerLink="/criar-compromisso" class="btn btn-primary">Criar Compromisso</a>
+  </button>
+  <table class="table">
     <thead>
         <tr>
             <th scope="col">ID</th>
@@ -16,7 +19,7 @@
     <tbody>
       <tr *ngFor="let compromisso of compromissos">
         <th scope="row">{{compromisso.id}}</th>
-        <td>{{compromisso.nome}}</td>
+        <td>{{compromisso.titulo}}</td>
         <td>{{compromisso.local}}</td>
         <td>{{compromisso.dataInicio}}</td>
         <td>{{compromisso.dataFim}}</td>
@@ -30,3 +33,5 @@
       </tr>
     </tbody>
  </table>
+</div>
+
