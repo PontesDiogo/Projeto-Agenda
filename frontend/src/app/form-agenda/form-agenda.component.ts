@@ -52,13 +52,13 @@ export class FormCompromissosComponent implements OnInit{
     }
 
     save(){
-      const titulo = this.formGroupCompromissos.get('title')?.value;
+      const titulo = this.formGroupCompromissos.get('titulo')?.value;
       if ( !titulo || titulo.trim() === "" ){
         alert("Verifique o titulo")
       }
       else{
       this.service.save(this.formGroupCompromissos.value).subscribe({
-        next: () => this.router.navigate([`/compromissos`])
+        next: () => this.router.navigate([`compromissos`])
       })
     }
   }

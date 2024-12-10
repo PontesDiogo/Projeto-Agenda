@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Compromisso } from '../compromisso';
-import { FormGroup } from '@angular/forms';
+import { FormGroup, FormsModule } from '@angular/forms';
 import { CompromissosService } from '../compromissos.service';
+import { Router } from 'express';
+import { relative } from 'path';
 
 @Component({
   selector: 'app-agenda-de-compromissos',
@@ -13,12 +15,14 @@ import { CompromissosService } from '../compromissos.service';
 
 export class AgendaDeCompromissosComponent implements OnInit {
   compromissos: Compromisso[] = [  ]
-  constructor (private compromissosService: CompromissosService){}
+  
+  constructor (private compromissosService: CompromissosService, private router: Router){}
 
   ngOnInit(): void {
     this.compromissosService.getCompromissos().subscribe(((data: Compromisso[]) => this.compromissos = data));
 
   }
+  
   loadCompromissos(){
     this.compromissosService.getCompromissos().subscribe({
       next: data => this.compromissos = data
@@ -37,9 +41,9 @@ export class AgendaDeCompromissosComponent implements OnInit {
     })
   }
 
-  // create(){
-  //   this.router.navigate(['compromisso'])
-  // };
+  create(){
+    this.router.call('compromissos');
+  }
 
 
 
