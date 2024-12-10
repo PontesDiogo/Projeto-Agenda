@@ -64,8 +64,6 @@ export class FormCompromissosComponent implements OnInit {
   }
 
   save() {
-    const titulo = this.formGroupCompromissos.get('titulo')?.value;
-   
       this.service.save(this.formGroupCompromissos.value).subscribe({
         next: () => this.router.navigate([`compromissos`])
       })
