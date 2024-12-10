@@ -7,6 +7,8 @@
             <th scope="col">Local</th>
             <th scope="col">Data de Inicio</th>
             <th scope="col">Data de Fim</th>
+            <th scope="col">Hora de Inicio</th>
+            <th scope="col">Hora de Fim</th>
             <th scope="col">Descrição</th>
             <th scope="col"> Ações</th>
         </tr>
@@ -18,6 +20,8 @@
         <td>{{compromisso.local}}</td>
         <td>{{compromisso.dataInicio}}</td>
         <td>{{compromisso.dataFim}}</td>
+        <td>{{compromisso.horaInicio}}</td>
+        <td>{{compromisso.horaFim}}</td>
         <td>{{compromisso.descricao}}</td>
         <td>
           <button class="btn btn-primary" (click)="update(compromisso)">Editar</button>
