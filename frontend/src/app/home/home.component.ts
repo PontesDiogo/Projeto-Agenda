@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Compromisso } from '../compromisso';
 import { CompromissosService } from '../compromissos.service';
-import { Router } from 'express';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -12,7 +12,7 @@ export class HomeComponent {
   Compromissos: Compromisso [] = [];
 
   constructor(private service: CompromissosService,
-  private router: Router
+    private Router: Router
   ){}
 
   ngOnInit(){
@@ -22,6 +22,7 @@ export class HomeComponent {
   loadCompromissos(){
     this.service.getCompromissos().subscribe({
       next: data => this.Compromissos = data
+
     })
   };
 }

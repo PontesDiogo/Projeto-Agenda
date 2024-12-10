@@ -1,6 +1,5 @@
 <div class="container">
-  <button>
-    <a routerLink="/form-agenda" class="btn btn-primary" (click)="create">Criar Compromisso</a>
+  <button class="btn btn-primary" (click)="create()"> Adicionar Compromisso
   </button>
   <table class="table">
     <thead>
@@ -19,7 +18,7 @@
     <tbody>
       <tr *ngFor="let compromisso of compromissos">
         <th scope="row">{{compromisso.id}}</th>
-        <td>{{compromisso.titulo}}</td>
+        <td><a routerLink="/compromissos/{{compromisso.id}}">{{compromisso.titulo}}</a></td>
         <td>{{compromisso.local}}</td>
         <td>{{compromisso.dataInicio}}</td>
         <td>{{compromisso.dataFim}}</td>
@@ -27,7 +26,6 @@
         <td>{{compromisso.horaFim}}</td>
         <td>{{compromisso.descricao}}</td>
         <td>
-          <button class="btn btn-primary" (click)="update(compromisso)">Editar</button>
           <button class="btn btn-danger" (click)="delete(compromisso)">Excluir</button>
         </td>
       </tr>

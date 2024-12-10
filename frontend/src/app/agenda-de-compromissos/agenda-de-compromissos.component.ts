@@ -1,9 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Compromisso } from '../compromisso';
-import { FormGroup, FormsModule } from '@angular/forms';
 import { CompromissosService } from '../compromissos.service';
-import { Router } from 'express';
-import { relative } from 'path';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-agenda-de-compromissos',
@@ -29,8 +28,8 @@ export class AgendaDeCompromissosComponent implements OnInit {
     })
   };
 
-  delete(Compromissos: Compromisso){
-    this.compromissosService.delete(Compromissos).subscribe({
+  delete(Compromisso: Compromisso){
+    this.compromissosService.delete(Compromisso).subscribe({
       next: () => this.loadCompromissos()
     })
   };
@@ -42,9 +41,8 @@ export class AgendaDeCompromissosComponent implements OnInit {
   }
 
   create(){
-    this.router.call('compromissos');
-  }
-
+    this.router.navigate(['form-agenda'])
+  };
 
 
 }

@@ -9,9 +9,7 @@ const routes: Routes = [
   {path: 'home', component: HomeComponent},
   {path: 'compromissos', component: AgendaDeCompromissosComponent},
   {path: 'compromissos/:id', component: FormCompromissosComponent},
-  {path: 'form-agenda', component: FormCompromissosComponent},
-
-
+  {path: 'form-agenda', component: FormCompromissosComponent}
 ];
 
 @NgModule({
