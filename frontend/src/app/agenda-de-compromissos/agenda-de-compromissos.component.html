@@ -8,6 +8,7 @@
             <th scope="col">Data de Inicio</th>
             <th scope="col">Data de Fim</th>
             <th scope="col">Descrição</th>
+            <th scope="col"> Ações</th>
         </tr>
     </thead>
     <tbody>
@@ -18,6 +19,10 @@
         <td>{{compromisso.dataInicio}}</td>
         <td>{{compromisso.dataFim}}</td>
         <td>{{compromisso.descricao}}</td>
+        <td>
+          <button class="btn btn-primary" (click)="update(compromisso)">Editar</button>
+          <button class="btn btn-danger" (click)="delete(compromisso)">Excluir</button>
+        </td>
       </tr>
     </tbody>
  </table>

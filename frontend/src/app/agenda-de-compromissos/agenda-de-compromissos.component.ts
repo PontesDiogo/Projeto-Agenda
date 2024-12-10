@@ -19,6 +19,28 @@ export class AgendaDeCompromissosComponent implements OnInit {
     this.compromissosService.getCompromissos().subscribe(((data: Compromisso[]) => this.compromissos = data));
 
   }
+  loadCompromissos(){
+    this.compromissosService.getCompromissos().subscribe({
+      next: data => this.compromissos = data
+    })
+  };
+
+  delete(Compromissos: Compromisso){
+    this.compromissosService.delete(Compromissos).subscribe({
+      next: () => this.loadCompromissos()
+    })
+  };
+
+  update(Compromissos: Compromisso){
+    this.compromissosService.update(Compromissos).subscribe({
+      next: () => this.loadCompromissos()
+    })
+  }
+
+  // create(){
+  //   this.router.navigate(['compromisso'])
+  // };
+
 
 
 }

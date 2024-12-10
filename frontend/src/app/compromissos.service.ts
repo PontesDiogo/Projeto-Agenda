@@ -14,4 +14,19 @@ export class CompromissosService {
     return this.http.get<Compromisso[]>(this.apiUrl);
   }
 
+  getCompromissosById(id:number): Observable<Compromisso>{
+    return this.http.get<Compromisso>(`${this.apiUrl}/${id}`);
+  }
+
+  delete(compromissos: Compromisso):Observable<void>{
+    return this.http.delete<void>(`${this.apiUrl}/${compromissos.id}`)
+  }
+
+  update(compromissos: Compromisso):Observable<Compromisso>{
+    return this.http.put<Compromisso>(`${this.apiUrl}/${compromissos.id}`,compromissos);
+  };
+
+  save(compromissos: Compromisso):Observable<Compromisso>{
+    return this.http.post<Compromisso>(this.apiUrl, compromissos);
+  };
 }
