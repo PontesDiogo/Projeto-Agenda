@@ -6,7 +6,7 @@
       <label for="titulo" class="form-label">Titulo</label>
       <input formControlName="titulo" type="text" class="form-control" id="titulo"
         placeholder="Defina um titulo para o compromissso">
-        
+
     </div>
     <div class="mb-3">
       <label for="descricao" class="form-label">Descrição</label>
@@ -39,12 +39,19 @@
     </div>
 
 
-    
-    <button class="btn btn-primary" (click)="save()" *ngIf="!isEditing">
-      <span>Salvar Compromisso</span>
-    </button>
-    <button class="btn btn-primary" (click)="update()" *ngIf="isEditing">  <span>Editar</span> </button>
-    <button class="btn cancelar" (click)="cancelar()"> Fechar</button>
+    <div class="buttons">
+      <tr>
+        <td> <button class="btn btn-primary" (click)="save()" *ngIf="!isEditing">
+            <span>Salvar Compromisso</span>
+          </button>
+          <button class="btn btn-primary" (click)="update()" *ngIf="isEditing"> <span>Editar</span> </button>
+        </td>
+        <td>
 
+          <button class="btn cancelar" (click)="cancelar()"> Fechar</button>
+        </td>
+      </tr>
+
+    </div>
   </form>
 </div>
