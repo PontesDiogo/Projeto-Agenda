@@ -29,4 +29,8 @@ export class CompromissosService {
   save(compromissos: Compromisso):Observable<Compromisso>{
     return this.http.post<Compromisso>(this.apiUrl, compromissos);
   };
+
+  cancelar(comproissos: Compromisso):Observable<Compromisso>{
+    return this.http.delete<Compromisso>(`${this.apiUrl}/${comproissos.id}`);
+  }
 }

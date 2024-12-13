@@ -29,8 +29,19 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    gap: 10px;
   }
 
   .btn:hover {
     background-color: #3e828e;
+  }
+
+  .btn.cancelar {
+    background-color: #f44336;
+    gap: 10px;
+  }
+
+  .btn.cancelar:hover {
+    background-color: #d32f2f;
+    
   }

@@ -69,5 +69,8 @@ export class FormCompromissosComponent implements OnInit {
       })
     
   }
+  cancelar() {
+    this.router.navigate([`compromissos`]);
+    }
+  }
 
-}
